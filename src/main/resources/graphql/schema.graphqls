@@ -3,8 +3,15 @@ type Query{
     findOne(id: ID): Book
     allPeople: [Person]
     allPeoplePaged(page: Int, size: Int): [Person]
+    allPeoplePageBack(page: Int, size: Int): Page
 }
-
+type Page{
+    content: [Person]
+    totalPages: Int
+    totalElements: Int
+    isFirst: Boolean
+    isLast: Boolean
+}
 type Person{
     id: ID!
     firstName: String

@@ -18,6 +18,28 @@ GraphQL is independent of the dat layer !!
 * [REST](http://localhost:8080/api/v1/people?page=0&size=10)
 * [GraphiQL](http://localhost:8080/graphiql?path=/graphql)
 
+More structured page for graphql query
+```graphql
+{
+  allPeoplePageBack(page: 0, size: 2) {
+    totalPages
+    totalElements
+    isLast
+    isFirst
+    content {
+      id
+      firstName
+      lastName
+      email
+      address {
+        city
+        state
+      }
+    }
+  }
+}
+```
+
 ## Credit
 
 me 🤭

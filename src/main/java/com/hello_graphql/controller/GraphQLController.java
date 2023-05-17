@@ -41,4 +41,16 @@ public class GraphQLController {
     public Page<Person> allPeoplePaged(final @Argument Integer page, final @Argument Integer size) {
         return mPersonRepository.findAll(PageRequest.of(page, size));
     }
+
+    @QueryMapping
+    public com.hello_graphql.model.Page allPeoplePageBack(final @Argument Integer page, final @Argument Integer size) {
+        Page<Person> p = mPersonRepository.findAll(PageRequest.of(page, size));
+        return new com.hello_graphql.model.Page(
+                p.getTotalPages(),
+                p.getNumberOfElements(),
+                p.getContent(),
+                p.isFirst(),
+                p.isLast());
+
+    }
 }
