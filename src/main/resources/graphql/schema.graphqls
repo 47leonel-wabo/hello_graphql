@@ -1,6 +1,23 @@
 type Query{
     allBooks: [Book]
     findOne(id: ID): Book
+    allPeople: [Person]
+    allPeoplePaged(page: Int, size: Int): [Person]
+}
+
+type Person{
+    id: ID!
+    firstName: String
+    lastName: String
+    phone: String
+    email: String
+    address: Address
+}
+
+type Address{
+    id: ID!
+    city: String
+    state: String
 }
 
 type Book{

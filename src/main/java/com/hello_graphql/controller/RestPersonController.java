@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = {"/api/v1/people"})
-public class PersonController {
+public class RestPersonController {
     private final PersonRepository mPersonRepository;
 
-    public PersonController(PersonRepository personRepository) {
+    public RestPersonController(PersonRepository personRepository) {
         mPersonRepository = personRepository;
     }
 
