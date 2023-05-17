@@ -2,6 +2,15 @@
 
 Hello World project with Spring Boot 3.x and GraphQL on the same parent.
 
+## Dependencies
+
+* Spring Boot Starter GraphQl
+* Spring Boot Starter Web
+* Java Faker
+* H2
+* Spring Boot Starter Data JPA
+* Java v17
+
 ## Note (⚠ important)
 
 ```markdown
